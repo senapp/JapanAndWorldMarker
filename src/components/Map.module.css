@@ -1,0 +1,104 @@
+.buttonGreen {
+    background-color: limegreen !important;
+    box-shadow: 0 5px 0 green !important;
+}
+
+.buttonGreen:active {
+    box-shadow: 0 0 0 green !important;
+}
+
+.buttonGreen:hover {
+    background-color: limegreen !important;
+}
+
+.buttonBlue {
+    background-color: blue !important;
+    box-shadow: 0 5px 0 navy !important;
+}
+
+.buttonBlue:active {
+    box-shadow: 0 0 0 navy !important;
+}
+
+.buttonBlue:hover {
+    background-color: blue !important;
+}
+
+.buttonRed {
+    background-color: red !important;
+    box-shadow: 0 5px 0 maroon !important;
+}
+
+.buttonRed:active {
+    box-shadow: 0 0 0 maroon !important;
+}
+
+.buttonRed:hover {
+    background-color: red !important;
+}
+
+.buttonYellow {
+    background-color: gold !important;
+    box-shadow: 0 5px 0 goldenrod !important;
+}
+
+.buttonYellow:active {
+    box-shadow: 0 0 0 goldenrod !important;
+}
+
+.buttonYellow:hover {
+    background-color: gold !important;
+}
+
+.buttonCancel {
+    text-decoration: line-through !important;
+}
+
+.buttonBar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.featureName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.flag {
+    
+}
+
+.featureControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    position: absolute;
+    z-index: 10000;
+    bottom: -200px;
+    transform: scale(1.25) translate(0px, -200px);
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 17px;
+    box-shadow: 2px 4px 0 silver;
+}
+
+.generalControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    position: absolute;
+    z-index: 10000;
+    bottom: 0;
+    right: 0;
+    transform: scale(0.9) translate(0px, -25px);
+}
+
+.mapContainer {
+    height: 100%;
+    width: 100%;
+}
