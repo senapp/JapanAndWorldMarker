@@ -7,3 +7,8 @@ export const removeElementArray = <T>(arr: T[], ele: T): void => {
 };
 
 export const getSafeName = (name: string): string => name.trim().replace(/\s/g, '').toLocaleLowerCase();
+
+export function isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+}

@@ -78,7 +78,7 @@
     position: absolute;
     z-index: 10000;
     bottom: -200px;
-    transform: scale(1.25) translate(0px, -200px);
+    transform: scale(var(--feature-size)) translate(0px, -200px);
     background-color: white;
     padding: 20px 30px;
     border-radius: 17px;
@@ -87,7 +87,7 @@
 
 .general-control-top {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 10px;
     gap: 10px;
@@ -95,13 +95,13 @@
     z-index: 10000;
     top: 0;
     right: 0;
-    transform: scale(0.9) translate(0px, 10px);
+    transform: scale(var(--general-size)) translate(calc(-30px + var(--offset)), 10px);
     align-items: self-end;
 }
 
 .general-control-bottom {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 10px;
     gap: 10px;
@@ -109,7 +109,7 @@
     z-index: 10000;
     bottom: 0;
     right: 0;
-    transform: scale(0.9) translate(0px, -25px);
+    transform: scale(var(--general-size)) translate(calc(-30px + var(--offset)), -25px);
     align-items: self-end;
 }
 
