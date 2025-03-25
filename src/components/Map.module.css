@@ -85,7 +85,21 @@
     box-shadow: 2px 4px 0 silver;
 }
 
-.generalControl {
+.general-control-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    transform: scale(0.9) translate(0px, 10px);
+    align-items: self-end;
+}
+
+.general-control-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,9 +110,14 @@
     bottom: 0;
     right: 0;
     transform: scale(0.9) translate(0px, -25px);
+    align-items: self-end;
 }
 
 .mapContainer {
     height: 100%;
     width: 100%;
+}
+
+.hidden-upload {
+    display: none;
 }

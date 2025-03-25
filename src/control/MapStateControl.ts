@@ -49,5 +49,15 @@ export const getLocations = (locationCategory: LocationCategory): string[] => {
     return returnItems;
 };
 
+export const resetLocations = (): void => {
+    localStorage.clear();
+};
+
+export const recordLocations = (locationCategory: LocationCategory, locations: string[]): void => {
+    locations.forEach(location => {
+        localStorage.setItem(`saved_${getSaveCode(locationCategory)}_${location}`, location)
+    })
+};
+
 export const hasLocation = (feature: Feature, locations: string[]): boolean =>
     locations.includes(getSafeName(feature.name));
