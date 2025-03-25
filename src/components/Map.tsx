@@ -8,7 +8,6 @@ import { Layer } from 'leaflet';
 import { Button } from './Button';
 import { getMapSettings, MapType } from '../control/MapControl';
 import { addLocation, EmptyFeature, Feature, getLocations, hasLocation, LocationCategory, recordLocations, removeLocation, resetLocations } from '../control/MapStateControl';
-import { isMobile } from '../utils/funcs';
 
 export const Map: React.FC = () => {
     const [mapSettings, SetMapSettings] = useState(getMapSettings(MapType.Japan));
@@ -138,8 +137,6 @@ export const Map: React.FC = () => {
         URL.revokeObjectURL(url);
     }
 
-    const mobileView = isMobile();
-
     return (<>
         <MapContainer className={css.mapContainer} center={mapSettings.position} zoom={5} >
             <TileLayer attribution={'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'} url={'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'} />
@@ -150,7 +147,7 @@ export const Map: React.FC = () => {
                 style={style}
             />
         </MapContainer>
-        {currentFeature.name.length > 0 && <div style={{ "--feature-size": `${mobileView ? 2 : 1.25}` } as React.CSSProperties} className={css.featureControl}>
+        {currentFeature.name.length > 0 && <div className={css.featureControl}>
             <div className={css.featureName}>
                 {getFeatureName(currentFeature)}
             </div>
@@ -165,7 +162,7 @@ export const Map: React.FC = () => {
                     onClick={handleBookmark} />}
             </div>
         </div>}
-        <div style={{ "--general-size": `${mobileView ? 1.5 : 0.9}`, "--offset": `${mobileView ? -20 : 0}px` } as React.CSSProperties} className={css.generalControlTop}>
+        <div className={css.generalControlTop}>
             <Button
                 className={switchClicked ? css.buttonRed : css.buttonGreen}
                 label={switchClicked ? (langaugeSwitched ? '日本' : 'Japan') : (langaugeSwitched ? '世界' : 'World')}
@@ -181,7 +178,7 @@ export const Map: React.FC = () => {
                     setLangaugeSwitched(!langaugeSwitched);
                 }} />
         </div>
-        <div style={{ "--general-size": `${mobileView ? 1.5 : 0.9}`, "--offset": `${mobileView ? -20 : 0}px` } as React.CSSProperties} className={css.generalControlBottom}>
+        <div className={css.generalControlBottom}>
             <Button
                 className={css.buttonGreen}
                 label={!langaugeSwitched ? 'Export' : 'エクスポート'}

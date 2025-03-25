@@ -78,39 +78,37 @@
     position: absolute;
     z-index: 10000;
     bottom: -200px;
-    transform: scale(var(--feature-size)) translate(0px, -200px);
+    transform: scale(1.25) translate(0px, -240px);
     background-color: white;
     padding: 20px 30px;
     border-radius: 17px;
     box-shadow: 2px 4px 0 silver;
 }
 
-.general-control-top {
+.general-control-bottom {
     display: flex;
     flex-direction: row;
-    align-items: center;
     margin: 10px;
     gap: 10px;
     position: absolute;
     z-index: 10000;
     top: 0;
     right: 0;
-    transform: scale(var(--general-size)) translate(calc(-30px + var(--offset)), 10px);
-    align-items: self-end;
+    transform: scale(0.9) translate(0, 10px);
+    justify-self: anchor-center;
 }
 
-.general-control-bottom {
+.general-control-top {
     display: flex;
     flex-direction: row;
-    align-items: center;
     margin: 10px;
     gap: 10px;
     position: absolute;
     z-index: 10000;
     bottom: 0;
     right: 0;
-    transform: scale(var(--general-size)) translate(calc(-30px + var(--offset)), -25px);
-    align-items: self-end;
+    transform: scale(0.9) translate(0, -25px);
+    justify-self: anchor-center;
 }
 
 .mapContainer {
