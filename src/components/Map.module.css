@@ -77,38 +77,25 @@
     gap: 10px;
     position: absolute;
     z-index: 10000;
-    bottom: -200px;
-    transform: translate(0px, -280px);
+    bottom: 0;
+    transform: translate(0px, -20px);
     background-color: white;
     padding: 20px 30px;
     border-radius: 17px;
     box-shadow: 2px 4px 0 silver;
 }
 
-.general-control-bottom {
+.general-control-top {
     display: flex;
-    flex-direction: row;
+    flex-flow: wrap;
     margin: 10px;
     gap: 10px;
     position: absolute;
     z-index: 10000;
     top: 0;
-    right: 0;
-    transform: scale(0.9) translate(0, 10px);
-    justify-self: anchor-center;
-}
-
-.general-control-top {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    gap: 10px;
-    position: absolute;
-    z-index: 10000;
-    bottom: 0;
-    right: 0;
-    transform: scale(0.9) translate(0, -25px);
-    justify-self: anchor-center;
+    width: 80%;
+    justify-content: center;
+    transform: scale(0.8);
 }
 
 .mapContainer {

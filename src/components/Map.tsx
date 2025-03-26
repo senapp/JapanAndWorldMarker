@@ -171,8 +171,6 @@ export const Map: React.FC = () => {
                 onClick={() => {
                     setLangaugeSwitched(!langaugeSwitched);
                 }} />
-        </div>
-        <div className={css.generalControlBottom}>
             <Button
                 className={css.buttonGreen}
                 label={!langaugeSwitched ? 'Export' : 'エクスポート'}
