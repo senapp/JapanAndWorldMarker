@@ -135,6 +135,7 @@ export const Map: React.FC = () => {
         document.body.removeChild(downloadLink);
 
         URL.revokeObjectURL(url);
+        alert(langaugeSwitched ? "Downloaded file!" : "ファイルをダウンロードしました!")
     }
 
     return (<>
