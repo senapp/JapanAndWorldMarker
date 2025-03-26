@@ -125,21 +125,10 @@ export const Map: React.FC = () => {
 
     const downloadContentAsFile = (data: string, fileNameWithExtension: string) => {
         try {
-            const blob = new Blob([data], { type: "text/plain" });
-            const url = URL.createObjectURL(blob);
-            const downloadLink = document.createElement("a");
-            downloadLink.href = url;
-            downloadLink.target = '_blank';
-            downloadLink.download = fileNameWithExtension;
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-    
-            URL.revokeObjectURL(url);
-        } catch (e) {
-          document.body = e;
-        }
-
+            var FileSaver = require('file-saver');
+            var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
+            FileSaver.saveAs(blob, fileNameWithExtension);
+        } catch (e) {}
     }
 
     return (<>
