@@ -78,7 +78,7 @@
     position: absolute;
     z-index: 10000;
     bottom: -200px;
-    transform: scale(1.25) translate(0px, -240px);
+    transform: translate(0px, -280px);
     background-color: white;
     padding: 20px 30px;
     border-radius: 17px;
